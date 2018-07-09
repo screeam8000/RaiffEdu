@@ -10,7 +10,7 @@ public class Parent {
 
     }
 
-    public Parent (String familyName, String familySecret, String topSecret){
+    public Parent(String familyName, String familySecret, String topSecret){
     this.familyName = familyName;
     this.familySecret = familySecret;
     this.topSecret = topSecret;

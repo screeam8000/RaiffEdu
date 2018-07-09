@@ -1,4 +1,4 @@
-package Week1.Lesson01.HomeWork;
+package HomeWorks.Lesson01;
 
  /*
     Необходимо реализовать консольную программу,

@@ -13,7 +13,7 @@ public class Eagle extends Birds {
         this.eyeStrength = eyeStrength;
     }
 
-    public Eagle(String name, String colorDescription, short wingSize, int eyeStrength;){
+    public Eagle(String name, String colorDescription, short wingSize, int eyeStrength){
         super(name, colorDescription, wingSize);
         this.eyeStrength = eyeStrength;
     }

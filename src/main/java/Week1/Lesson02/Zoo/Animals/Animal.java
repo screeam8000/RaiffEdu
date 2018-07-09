@@ -1,6 +1,6 @@
 package Week1.Lesson02.Zoo.Animals;
 
-public class Animal {
+public abstract class Animal {
     protected String name;
     protected String colorDescription;
 

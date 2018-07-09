@@ -7,6 +7,10 @@ public class Cage implements ICageDescriptor {
 
     public Cage (Animal[] animals){ this.animals = animals; }
 
+    public Cage(Week1.Lesson01.OOP.dirty.Animal[] animalsFirst, int radius) {
+
+    }
+
     @Override
     public String getCageDescription() {
         StringBuilder descriptionBuilder = new StringBuilder();

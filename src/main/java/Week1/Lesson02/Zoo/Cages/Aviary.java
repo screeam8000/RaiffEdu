@@ -10,6 +10,10 @@ public class Aviary extends Cage {
         this.radius = radius;
     }
 
+    public Aviary(Week1.Lesson01.OOP.dirty.Animal[] animalsFirst, int radius) {
+        super(animalsFirst, radius);
+    }
+
     @Override
     public String getCageDescription() {
         StringBuilder descriptionBuilder = new StringBuilder();

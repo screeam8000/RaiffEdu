@@ -1,6 +1,6 @@
 package Week1.Lesson02.Zoo.Animals;
 
-public class Mammals extends Animal {
+public abstract class Mammals extends Animal {
     private boolean isWool;
 
     public boolean isWool() {

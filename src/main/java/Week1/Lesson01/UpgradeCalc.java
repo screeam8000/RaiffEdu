@@ -3,6 +3,10 @@ package Week1.Lesson01;
 import java.util.Scanner;
 
 public class UpgradeCalc {
+    private static int firstCalcNumber;
+    private static int secondCalcNumber;
+    private static String comand;
+
     public UpgradeCalc() {
     }
 
@@ -23,81 +27,62 @@ public class UpgradeCalc {
                                  int secondCalcNumber,
                                  String comand) {
         int result = 0;
-        byte var5 = -1;
-        switch (comand.hashCode()) {
-            case 42:
-                if (comand.equals("*")) {
-                    var5 = 2;
-                }
+        switch (comand) {
+            case "+":
+                result = firstCalcNumber + secondCalcNumber;
                 break;
-            case 43:
-                if (comand.equals("+"))
-                    var5 = 0;
+            case "-":
+                result = firstCalcNumber - secondCalcNumber;
+                break;
+            case "*":
+                result = firstCalcNumber * secondCalcNumber;
+                break;
+            case "/":
+                result = getDivide(firstCalcNumber, secondCalcNumber);
+                break;
+            case "f":
+                result = getFactorial2(firstCalcNumber, secondCalcNumber);
+                break;
         }
-        break;
-        case 47:
-        if (comand.equals("/")) {
-            var5 = 3;
-        }
-        break;
-        case 102:
-        if (comand.equals("f")) {
-            var5 = 4;
-        }
+
+        return result;
     }
 
-    switch(var5){
-        case 0:
-            result = firstCalcNumber + secondCalcNumber;
-            break;
-        case 1:
-            result = firstCalcNumber - secondCalcNumber;
-            break;
-        case 2:
-            result = firstCalcNumber * secondCalcNumber;
-            break;
-        case 3:
-            result = getDivide(firstCalcNumber, secondCalcNumber);
-            break;
-        case 4:
-            result = getFactorial2(firstCalcNumber, secondCalcNumber);
-    }
+    private static int getFactorial(int firstCalcNumber, int secondCalcNumber) {
+        if(firstCalcNumber > 100 | secondCalcNumber > 100
+                || (firstCalcNumber > 50
+                && secondCalcNumber > 50)
+                ) {
+            System.out.println("Too big numbers for factorial!");
+            return 0;
+        }
 
-    return result;
-}
-
-private static int getFactorial (int firstCalcNumber, int secondCalcNumber){
-    if (firstCalcNumber > 100 | secondCalcNumber > 100
-            || firstCalcNumber > 50 && secondCalcNumber > 50){
-        System.out.println("Too big number for factorial!");
-        return 0;
-        }else {
         int result = 1;
-
-        for (int step = firstCalcNumber; step != secondCalcNumber; ++step){
-            result *= step;
+        int step = firstCalcNumber;
+        while (step != secondCalcNumber) {
+            result *= step; //result = result * step;
+            step++;// step = step + 1;
         }
 
         return result;
     }
-}
 
-private static int getFactorial2 (int firstCalcNumber, secondCalcNumber){
-    int result = 1;
-
-    for (int i =firstCalcNumber; i < secondCalcNumber; ++i){
-        result *=i;
+    private static int getFactorial2(int firstCalcNumber, int secondCalcNumber) {
+        int result = 1;
+        for (int i = firstCalcNumber; i < secondCalcNumber; i++) {
+            result *= i;
         }
 
         return result;
+    }
+
+    private static int getDivide(int firstCalcNumber, int secondCalcNumber) {
+        if(secondCalcNumber == 0) {
+            System.out.println("WRONG! Zero!");
+            return 0;
+        }
+
+        return firstCalcNumber / secondCalcNumber;
+    }
 }
 
-private static int getDivide (int firsCalcNumber, int secondCalcNumber){
-    if (secondCalcNumber == 0){
-        System.out.println("WRONG! Zero!");
-        return 0;
-    } else {
-        return firsCalcNumber / secondCalcNumber;
-    }
-    }
-}

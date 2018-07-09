@@ -7,26 +7,28 @@ public class MainWorkOnMas {
         String[] randomDigitMas = new String[20];
 
         Random random = new Random();
-        for (int i = 0; i < randomDigitMas.length; i++){
-            randomDigitMas[i] = String.valueOf(random.nextGaussian());
+        for (int i = 0; i < randomDigitMas.length; i++) {
+            randomDigitMas[i] =
+                    String.valueOf(random.nextGaussian());
         }
 
         for (int i = 0; i < randomDigitMas.length; i++) {
-            System.out.println(randomDigitMas[i]+ " ");
+            System.out.print(randomDigitMas[i]+" ");
         }
 
-        short [][] shortMatrix = new short[5][5];
-        for (int i = 0; i < shortMatrix.length; i++){
+        short[][] shortMatrix = new short[5][5];
+        for (int i = 0; i < shortMatrix.length; i++) {
             for (int j = 0; j < shortMatrix[i].length; j++) {
                 shortMatrix[i][j] = (short) random.nextInt();
             }
         }
-        System.out.println("__________________");
+        System.out.println("____________________________");
 
-        for (int i = 0; i < shortMatrix.length; i++){
-            for (int j = 0; j < shortMatrix[i].length; j++);
-            System.out.print(shortMatrix[i][j] + "   ");
+        for (int i = 0; i < shortMatrix.length; i++) {
+            for (int j = 0; j < shortMatrix[i].length; j++) {
+                System.out.print(shortMatrix[i][j] + " ");
+            }
+            System.out.println();
         }
-        System.out.println();
     }
 }

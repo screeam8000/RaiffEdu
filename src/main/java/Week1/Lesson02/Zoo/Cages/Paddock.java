@@ -5,6 +5,10 @@ import Week1.Lesson02.Zoo.Animals.Animal;
 public class Paddock extends Cage{
     private int square;
 
+    public Paddock(Week1.Lesson01.OOP.dirty.Animal[] animalsSecond, int square) {
+        super(animalsSecond, square);
+    }
+
     public int getSquare() { return square; }
 
     public void setSquare(int square) {
