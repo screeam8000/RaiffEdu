@@ -1,0 +1,13 @@
+<xsd:schema xmlns:xmls="http://www.w3.org/2001/XMLSchema">
+
+    <xsd:element name="Student" type="StudentType"/>
+    <xsd:complexType name="StudentType">
+
+        <xsd:sequence>
+                <xsd:element name="StudName" type="xsd:string"/>
+        <xsd:element >
+
+
+    </xsd:complexType>
+
+</xsd:schema>
