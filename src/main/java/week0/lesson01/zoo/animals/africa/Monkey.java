@@ -20,7 +20,7 @@ public class Monkey extends Mammals {
 
     @Override
     public String toString() {
-        return "Monkey{" +
+        return " Monkey {" +
                 "wordKnown=" + wordKnown +
                 ", name='" + name + '\'' +
                 ", colorDescription='" + colorDescription + '\'' +
