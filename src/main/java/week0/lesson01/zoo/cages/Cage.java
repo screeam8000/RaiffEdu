@@ -7,7 +7,7 @@ public class Cage implements ICageDescriptor {
 
     public Cage (Animal[] animals){ this.animals = animals; }
 
-    public Cage(week0.lesson00.OOP.dirty.Animal[] animalsFirst, int radius) {
+    public Cage(Animal[] animals, int radius) {
 
     }
 
